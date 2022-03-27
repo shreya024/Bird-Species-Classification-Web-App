@@ -3,7 +3,7 @@ import tensorflow as tf
 
 @st.cache(allow_output_mutation=True)
 def load_model():
-  model=tf.keras.models.load_model('/bird_classification_new_model.h5')
+  model=tf.keras.models.load_model('https://github.com/shreya024/Bird-Species-Classification-Web-App/blob/master/bird_classification_new_model.h5')
   return model
 with st.spinner('Model is being loaded..'):
   model=load_model()
