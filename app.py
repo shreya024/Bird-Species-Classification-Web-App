@@ -37,11 +37,11 @@ else:
     st.image(image, use_column_width=True)
     predictions = import_and_predict(image, model)
     score = tf.nn.softmax(predictions[0])
-    st.write(predictions)
-    st.write(score)
     index = np.argmax(predictions[0])
     predicted_class = classes[index]
     probability = predictions[0][index]*100
-    print(
+    st.write(predicted_class)
+    st.write(probability)
+    st.write(
     "This image most likely belongs to {predicted_class} with a {probability:.2f} percent confidence."
 )
