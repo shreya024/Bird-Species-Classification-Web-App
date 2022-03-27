@@ -41,8 +41,8 @@ else:
     st.write(predictions)
     st.write(score)
     index = np.argmax(predictions[0])
-    class = classes[index]
+    predicted_class = classes[index]
     probability = predictions[0][index]*100
     print(
-    "This image most likely belongs to {class} with a {probability:.2f} percent confidence."
+    "This image most likely belongs to {predicted_class} with a {probability:.2f} percent confidence."
 )
