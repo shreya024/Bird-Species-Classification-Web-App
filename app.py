@@ -24,8 +24,8 @@ def import_and_predict(image_data, model):
     
         img_size=(224,224)
         image = ImageOps.fit(image_data, img_size, Image.ANTIALIAS)
-        img=cv2.resize(image, img_size)
-        img=np.expand_dims(img, axis=0)
+        img = cv2.resize(image, img_size)
+        img = np.expand_dims(img, axis=0)
     
         prediction = model.predict(img)
         
@@ -40,9 +40,9 @@ else:
     score = tf.nn.softmax(predictions[0])
     st.write(predictions)
     st.write(score)
-    index=np.argmax(predictions[0])
-    class=classes[index]
-    probability=predictions[0][index]*100
+    index = np.argmax(predictions[0])
+    class = classes[index]
+    probability = predictions[0][index]*100
     print(
     "This image most likely belongs to {class} with a {probability:.2f} percent confidence."
 )
