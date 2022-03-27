@@ -24,8 +24,7 @@ def import_and_predict(image_data, model):
     
         img_size=(224,224)
         image = ImageOps.fit(image_data, img_size, Image.ANTIALIAS)
-        img = cv2.resize(image, img_size)
-        img = np.expand_dims(img, axis=0)
+        img = np.expand_dims(image, axis=0)
     
         prediction = model.predict(img)
         
