@@ -9,11 +9,11 @@ with st.spinner('Model is being loaded..'):
   model=load_model()
 
 st.write("""
-         # Bird Classification
+         # Birds Species Classification
          """
          )
 
-file = st.file_uploader("Please upload an brain scan file", type=["jpg", "png"])
+file = st.file_uploader("Please upload an image of a bird", type=["jpg", "png"])
 import cv2
 from PIL import Image, ImageOps
 import numpy as np
@@ -40,8 +40,5 @@ else:
     index = np.argmax(predictions[0])
     predicted_class = classes[index]
     probability = predictions[0][index]*100
-    st.write(predicted_class)
-    st.write(probability)
-    st.write(
-    "This image most likely belongs to {predicted_class} with a {probability:.2f} percent confidence."
+    st.write("This bird species belongs to the ",predicted_class," species with a ",probability," percent confidence."
 )
