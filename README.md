@@ -24,11 +24,6 @@ LINK TO WEBAPP:
 
 https://share.streamlit.io/shreyaghosh/birds-species-classification-web-app/main/app.py
 
-GLANCE AT THE WEBAPP
-
-![image](https://user-images.githubusercontent.com/78292851/156793113-3f6d9e91-665e-47b1-a1f6-316aaeeb2aa7.png)
-
-![image](https://user-images.githubusercontent.com/78292851/156793297-039024d7-d263-4444-9bbb-c05e8a945d47.png)
 
 MODELS USED
 
